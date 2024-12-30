@@ -2,7 +2,7 @@
 service: poop_or_not
 
 # Name of the container image.
-image: your-user/poop_or_not
+image: ghcr.io/jonathanyeong/poop-or-not:latest
 
 # Deploy to these servers.
 servers:
@@ -23,9 +23,8 @@ proxy:
 
 # Credentials for your image host.
 registry:
-  # Specify the registry server, if you're not using Docker Hub
-  # server: registry.digitalocean.com / ghcr.io / ...
-  username: your-user
+  server: ghcr.io
+  username: jonathanyeong
 
   # Always use an access token rather than real password when possible.
   password:
