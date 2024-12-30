@@ -5,7 +5,7 @@ class BathroomSessionsController < ApplicationController
   def update
     @bathroom_session = BathroomSession.find(params[:id])
     @bathroom_session.update!(end_time: Time.current)
-    redirect_to root_path # or wherever you want to redirect after finishing
+    redirect_to root_path
   end
 
 

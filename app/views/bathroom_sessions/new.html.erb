@@ -5,15 +5,8 @@
   <div class="text-gray-600">Time Elapsed</div>
 </div>
 
-<div class="flex flex-row gap-x-1.5 mb-3">
-  <%= button_to "💧", bathroom_session_bathroom_events_path(@bathroom_session, event_type: "pee"),
-    class: "inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none items-center justify-center px-4",
-    form_class: "flex-1 flex-wrap border-solid border-teal-500 rounded-md border-2 text-center"
-  %>
-  <%= button_to "💩", bathroom_session_bathroom_events_path(@bathroom_session, event_type: "poop"),
-    class: "inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none items-center justify-center px-4",
-    form_class: "flex-1 flex-wrap border-solid border-teal-500 rounded-md border-2 text-center"
-  %>
+<div id="bathroom_events">
+  <%= render "bathroom_events", bathroom_session: @bathroom_session %>
 </div>
 
 <%= link_to "Finished",
