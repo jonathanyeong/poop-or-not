@@ -1,5 +1,10 @@
 <h1 class="text-4xl mb-8 font-extrabold">Tracking 💩 sesh</h1>
 
+<div data-controller="timer" class="text-center mb-6">
+  <div data-timer-target="display" class="text-6xl font-mono mb-2">0:00</div>
+  <div class="text-gray-600">Time Elapsed</div>
+</div>
+
 <div class="flex flex-row gap-x-1.5 mb-3">
   <%= link_to "💧", new_bathroom_session_path, class: "inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none flex-wrap flex-1 items-center justify-center px-4 text-center border-solid border-teal-500 rounded-md border-2" %>
   <%= link_to "💩", new_bathroom_session_path, class: "inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none flex-wrap flex-1 items-center justify-center px-4 text-center border-solid border-teal-500 rounded-md border-2" %>
