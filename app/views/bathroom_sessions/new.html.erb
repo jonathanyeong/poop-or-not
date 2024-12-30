@@ -6,8 +6,17 @@
 </div>
 
 <div class="flex flex-row gap-x-1.5 mb-3">
-  <%= link_to "💧", new_bathroom_session_path, class: "inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none flex-wrap flex-1 items-center justify-center px-4 text-center border-solid border-teal-500 rounded-md border-2" %>
-  <%= link_to "💩", new_bathroom_session_path, class: "inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none flex-wrap flex-1 items-center justify-center px-4 text-center border-solid border-teal-500 rounded-md border-2" %>
+  <%= button_to "💧", bathroom_session_bathroom_events_path(@bathroom_session, event_type: "pee"),
+    class: "inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none items-center justify-center px-4",
+    form_class: "flex-1 flex-wrap border-solid border-teal-500 rounded-md border-2 text-center"
+  %>
+  <%= button_to "💩", bathroom_session_bathroom_events_path(@bathroom_session, event_type: "poop"),
+    class: "inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none items-center justify-center px-4",
+    form_class: "flex-1 flex-wrap border-solid border-teal-500 rounded-md border-2 text-center"
+  %>
 </div>
 
-<%= link_to "Finished", new_bathroom_session_path, class: "inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none flex-wrap items-center justify-center px-4 text-center border-solid border-teal-500 rounded-md border-2 w-full" %>
+<%= link_to "Finished",
+    bathroom_session_path(@bathroom_session),
+    data: { turbo_method: :patch },
+    class: "inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none flex-wrap items-center justify-center px-4 text-center border-solid border-teal-500 rounded-md border-2 w-full" %>
