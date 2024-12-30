@@ -2,7 +2,7 @@
 service: poop_or_not
 
 # Name of the container image.
-image: ghcr.io/jonathanyeong/poop-or-not:latest
+image: jonathanyeong/poop-or-not:latest
 
 # Deploy to these servers.
 servers:
