@@ -20,6 +20,7 @@ export default class extends Controller {
   }
 
   animateToast(toast) {
+    console.log("Toast is being animated!")
     // Show the toast
     setTimeout(() => {
       toast.classList.remove('translate-y-[-100%]', 'opacity-0')
