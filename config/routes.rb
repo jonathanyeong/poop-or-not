@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   resources "bathroom_sessions" do
     resources :bathroom_events, only: [ :create ]
+    collection do
+      get :export
+    end
   end
   root "bathroom_sessions#index"
 end
