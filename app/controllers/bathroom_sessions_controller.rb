@@ -13,12 +13,14 @@ class BathroomSessionsController < ApplicationController
 
   def new
     @bathroom_session = BathroomSession.create!(
-      start_time: Time.current
+      start_time: Time.current,
+      user_id: Current.session.user_id
     )
   end
 
   def export
-    sessions = BathroomSession.includes(:bathroom_events).order(created_at: :desc).reload
+    user = User.find(Current.session.user_id)
+    sessions = user.bathroom_sessions.includes(:bathroom_events).order(created_at: :desc).reload
 
     respond_to do |format|
       format.csv do
