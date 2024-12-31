@@ -18,7 +18,7 @@ class BathroomSessionsController < ApplicationController
   end
 
   def export
-    sessions = BathroomSession.includes(:bathroom_events).order(created_at: :desc)
+    sessions = BathroomSession.includes(:bathroom_events).order(created_at: :desc).reload
 
     respond_to do |format|
       format.csv do
