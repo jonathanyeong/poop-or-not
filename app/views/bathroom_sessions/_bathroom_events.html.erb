@@ -5,6 +5,7 @@
   %>
   <%= button_to "💩", bathroom_session_bathroom_events_path(@bathroom_session, event_type: "poop"),
     class: "inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none items-center justify-center px-4 w-full",
-    form_class: "flex-1 flex-wrap border-solid border-teal-500 rounded-md border-2 text-center hover:bg-teal-500 hover:text-white active:bg-teal-600 transition-colors duration-200"
+    form_class: "flex-1 flex-wrap border-solid border-teal-500 rounded-md border-2 text-center hover:bg-teal-500 hover:text-white active:bg-teal-600 transition-colors duration-200",
+    data: { controller: "confetti" }
   %>
 </div>
