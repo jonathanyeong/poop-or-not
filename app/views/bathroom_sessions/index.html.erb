@@ -1,5 +1,5 @@
 <h1 class="text-4xl mb-8 font-extrabold block">Need to 💩?</h1>
 <%= link_to "It's coming!", new_bathroom_session_path, class: "mb-2 inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none flex-wrap items-center justify-center px-4 text-center border-solid border-teal-500 rounded-md border-2 w-full" %>
 <%= link_to "Export CSV",
-    export_bathroom_sessions_path(format: :csv),
+    export_bathroom_sessions_path(format: :csv, timestamp: Time.current.to_i),
     class: "mb-2 inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none flex-wrap items-center justify-center px-4 text-center border-solid border-purple-400 rounded-md border-2 w-full" %>

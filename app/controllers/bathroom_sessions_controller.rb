@@ -52,7 +52,7 @@ class BathroomSessionsController < ApplicationController
         end
 
         send_data csv_data,
-          filename: "bathroom-sessions-#{Time.current.strftime('%Y-%m-%d')}.csv",
+          filename: "bathroom-sessions-#{Time.current.to_i}.csv",
           type: "text/csv"
       end
     end
